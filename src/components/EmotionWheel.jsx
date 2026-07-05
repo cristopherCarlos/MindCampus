@@ -1,19 +1,16 @@
 import React from 'react';
 
 export default function EmotionWheel({ onSelectEmotion, selectedEmotion }) {
-  // Datos estables de las 8 emociones base, sus colores y textos
+  // Datos estables de las 5 emociones base, sus colores y textos
   const emotions = [
-    { name: 'Miedo', bg: '#ffedd5', border: '#fdba74', text: '#9a3412', angle: 0 },
-    { name: 'Enojo', bg: '#fee2e2', border: '#fca5a5', text: '#991b1b', angle: 45 },
-    { name: 'Tristeza', bg: '#dbeafe', border: '#93c5fd', text: '#1e40af', angle: 90 },
-    { name: 'Felicidad', bg: '#f3e8ff', border: '#d8b4fe', text: '#6b21a8', angle: 135 },
-    { name: 'Sorpresa', bg: '#fef9c3', border: '#fde047', text: '#854d0e', angle: 180 },
-    { name: 'Repugnancia', bg: '#dcfce7', border: '#86efac', text: '#166534', angle: 225 },
-    { name: 'Amor', bg: '#fce7f3', border: '#f9a8d4', text: '#9d174d', angle: 270 },
-    { name: 'Confianza', bg: '#ccfbf1', border: '#5eead4', text: '#115e59', angle: 315 },
+    { name: 'Agobio', bg: '#ffedd5', border: '#fdba74', text: '#c2410c', angle: 0 },
+    { name: 'Ansiedad', bg: '#fef9c3', border: '#fde047', text: '#854d0e', angle: 72 },
+    { name: 'Frustración', bg: '#fee2e2', border: '#fca5a5', text: '#991b1b', angle: 144 },
+    { name: 'Miedo al fracaso', bg: '#f3e8ff', border: '#d8b4fe', text: '#6b21a8', angle: 216 },
+    { name: 'Desesperanza', bg: '#dbeafe', border: '#93c5fd', text: '#1e40af', angle: 288 },
   ];
 
-  // Configuración geométrica para gajos exactos de 45 grados en un SVG de 400x400
+  // Configuración geométrica para gajos exactos de 72 grados en un SVG de 400x400
   // Centro: (200, 200), Radio: 180.
   // Formula de los paths: M 200 200 L X1 Y1 A 180 180 0 0 1 X2 Y2 Z
   const getCoordinatesForPercent = (percent) => {
@@ -32,15 +29,15 @@ export default function EmotionWheel({ onSelectEmotion, selectedEmotion }) {
       >
         <g>
           {emotions.map((emotion, index) => {
-            // Cada gajo cubre exactamente el 12.5% del círculo (45 grados)
-            const startPercent = index / 8;
-            const endPercent = (index + 1) / 8;
+            // Cada gajo cubre exactamente el 20% del círculo (72 grados)
+            const startPercent = index / 5;
+            const endPercent = (index + 1) / 5;
             
             const [startX, startY] = getCoordinatesForPercent(startPercent);
             const [endX, endY] = getCoordinatesForPercent(endPercent);
             
             // Ángulo medio del gajo para posicionar y rotar el texto correctamente
-            const textAngle = emotion.angle + 22.5;
+            const textAngle = emotion.angle + 36;
             const textRad = (textAngle * Math.PI) / 180;
             // Desplazamiento del texto del centro hacia afuera (Radio intermedio ~115)
             const textX = 200 + 115 * Math.cos(textRad);
@@ -75,7 +72,14 @@ export default function EmotionWheel({ onSelectEmotion, selectedEmotion }) {
                     isSelected ? 'scale-105 font-black' : 'group-hover:scale-102'
                   }`}
                 >
-                  {emotion.name}
+                  {emotion.name === 'Miedo al fracaso' ? (
+                    <>
+                      <tspan x={textX} dy="-7">Miedo al</tspan>
+                      <tspan x={textX} dy="14">fracaso</tspan>
+                    </>
+                  ) : (
+                    emotion.name
+                  )}
                 </text>
               </g>
             );
