@@ -445,10 +445,12 @@ export default function App() {
     setIsModalOpen(true);
   };
 
-  const closeModal = () => {
+  const closeModal = (keepSelection = false) => {
     setIsModalOpen(false);
-    setSelectedEmotion(null);
-    setSelectedTheme('entregas_cruzadas');
+    if (!keepSelection) {
+      setSelectedEmotion(null);
+      setSelectedTheme('entregas_cruzadas');
+    }
   };
 
   const handleSelectEmotion = (emotion) => {
@@ -469,7 +471,7 @@ export default function App() {
 
   const handleFinishReflection = () => {
     setUnlockedFeatures(true);
-    closeModal();
+    closeModal(true);
     setTimeout(() => {
       window.location.hash = 'actividades';
     }, 50);
