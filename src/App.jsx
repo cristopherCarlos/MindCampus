@@ -6,7 +6,7 @@ import Modal from './components/Modal';
 import EmotionWheel from './components/EmotionWheel';
 
 const REFLECTION_THEMES_BY_EMOTION = {
- agobio: {
+  agobio: {
     title: 'Agobio',
     color: '#B1D4E5',
     description: 'Es la sensación de estar desbordado cuando la cantidad de exigencias académicas (tareas, plazos, responsabilidades) supera lo que sientes que puedes manejar en el momento, generando una sensación de "no darte a abasto".',
@@ -15,8 +15,18 @@ const REFLECTION_THEMES_BY_EMOTION = {
         title: 'Entregas cruzadas',
         message: 'Hola! Veo que has seleccionado que en estos momentos sientes agobio por tener varias entregas al mismo tiempo. Que todo se junte no significa que no puedas con ello, solo necesitas ordenar por dónde empezar y avanzar de a un paso. Ahora veamos algunas actividades que te ayuden a cambiar este sentimiento y poder autorregularte de una mejor manera',
         icon: (
-          <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+          <svg
+            className="w-5 h-5 text-white"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth="2.5"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+            />
           </svg>
         ),
         activities: [
@@ -63,8 +73,18 @@ const REFLECTION_THEMES_BY_EMOTION = {
         title: 'Estudios y otras responsabilidades',
         message: 'Hola! Veo que has seleccionado que sientes agobio por combinar tus estudios con otras responsabilidades. No es que te falte capacidad, es que tu tiempo también tiene límites, y está bien reconocerlo para organizarte mejor. Ahora veamos algunas actividades que te ayuden a cambiar este sentimiento y poder autorregularte de una mejor manera',
         icon: (
-          <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          <svg
+            className="w-5 h-5 text-white"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth="2.5"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M12 6v6l4 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"
+            />
           </svg>
         ),
         activities: [
@@ -111,8 +131,18 @@ const REFLECTION_THEMES_BY_EMOTION = {
         title: 'Retomar tras un imprevisto',
         message: 'Hola! Veo que has seleccionado que sientes agobio por retomar tus actividades después de un imprevisto. No necesitas recuperar todo de golpe, solo enfocarte en el siguiente paso, sin exigirte volver al ritmo anterior de inmediato. Ahora veamos algunas actividades que te ayuden a cambiar este sentimiento y poder autorregularte de una mejor manera',
         icon: (
-          <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.27 15C20.25 18.25 17 21 12 21" />
+          <svg
+            className="w-5 h-5 text-white transition-transform duration-300 group-hover:rotate-180"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth="2.5"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99"
+            />
           </svg>
         ),
         activities: [
@@ -168,7 +198,47 @@ const REFLECTION_THEMES_BY_EMOTION = {
           <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
             <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
           </svg>
-        )
+        ),
+        activities: [
+          {
+            title: 'Respiración diafragmática 4-4-6',
+            time: '4 min',
+            tool: 'Ninguna',
+            objective: 'Enfocar el aire en el abdomen para reducir síntomas físicos de ansiedad.',
+            steps: [
+              'Siéntate o recuéstate y coloca una mano sobre el abdomen.',
+              'Inhala por la nariz en 4 segundos, sintiendo cómo se expande el abdomen (no el pecho).',
+              'Sostén el aire 4 segundos.',
+              'Exhala lentamente por la boca en 6 segundos, sintiendo cómo baja el abdomen.',
+              'Repite el ciclo entre 6 y 8 veces.'
+            ]
+          },
+          {
+            title: 'Grounding 5-4-3-2-1',
+            time: '5 min',
+            tool: 'Ninguna',
+            objective: 'Identificar estímulos del entorno para anclarse al presente.',
+            steps: [
+              'Observa a tu alrededor y nombra (en voz alta o mental) 5 cosas que puedes ver.',
+              'Nombra 4 cosas que puedes escuchar en este momento.',
+              'Nombra 3 cosas que puedes tocar y siente su textura.',
+              'Nombra 2 cosas que puedes oler.',
+              'Nombra 1 cosa que puedas saborear o el sabor que tienes en la boca ahora.'
+            ]
+          },
+          {
+            title: 'Visualización breve de logro',
+            time: '3 min',
+            tool: 'Ninguna',
+            objective: 'Imaginar con detalle un logro pasado para recordar tu capacidad.',
+            steps: [
+              'Cierra los ojos y respira normal por unos segundos.',
+              'Recuerda un examen o evaluación anterior en la que te fue bien.',
+              'Revive el momento con detalle: dónde estabas, cómo te sentías, qué hiciste bien.',
+              "Antes de abrir los ojos, dite a ti mismo: 'ya lo he logrado antes, tengo esa capacidad'."
+            ]
+          }
+        ]
       },
       sustentacion_proyecto: {
         title: 'Sustentación de proyecto final',
@@ -177,7 +247,46 @@ const REFLECTION_THEMES_BY_EMOTION = {
           <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
             <path strokeLinecap="round" strokeLinejoin="round" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" />
           </svg>
-        )
+        ),
+        activities: [
+          {
+            title: 'Ensayo en voz alta cronometrado',
+            time: '10 min',
+            tool: 'Temporizador',
+            objective: 'Practicar la sustentación en voz alta para ganar fluidez y reducir la incertidumbre.',
+            steps: [
+              'Ponte de pie como si estuvieras frente al jurado.',
+              'Activa un cronómetro con el tiempo que tendrás real para tu sustentación.',
+              'Practica en voz alta, sin leer, apoyándose solo en tus diapositivas o notas clave.',
+              'Al terminar, anota qué parte se sintió más insegura para repasarla una vez más.'
+            ]
+          },
+          {
+            title: 'Postura de confianza (power posing)',
+            time: '2 min',
+            tool: 'Ninguna',
+            objective: 'Adoptar una postura corporal abierta y erguida antes de sustentar para regular la activación fisiológica.',
+            steps: [
+              'Ponte de pie con los pies separados al ancho de los hombros.',
+              'Coloca las manos en la cintura o levanta los brazos en V, con el pecho abierto.',
+              'Mantén la postura durante 2 minutos, respirando con calma.',
+              'Justo antes de entrar a sustentar, recuerda esa sensación de apertura corporal.'
+            ]
+          },
+          {
+            title: 'Reestructuración de pensamientos',
+            time: '5 min',
+            tool: 'Ninguna',
+            objective: 'Identificar un pensamiento catastrófico y reemplazarlo por uno más realista.',
+            steps: [
+              "Identifica el pensamiento catastrófico que ronda tu mente (ej. 'voy a fallar').",
+              'Escríbelo tal cual aparece, sin suavizarlo.',
+              "Pregúntate: '¿qué evidencia real tengo de esto?' y '¿qué le diría a un compañero que piensa igual?'",
+              "Escribe una versión más realista y equilibrada (ej. 'me preparé, puedo hacerlo bien aunque no salga perfecto').",
+              'Repite la nueva frase 2 o 3 veces antes de continuar.'
+            ]
+          }
+        ]
       },
       evaluaciones_sorpresa: {
         title: 'Evaluaciones sorpresa',
@@ -186,7 +295,45 @@ const REFLECTION_THEMES_BY_EMOTION = {
           <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
             <path strokeLinecap="round" strokeLinejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
           </svg>
-        )
+        ),
+        activities: [
+          {
+            title: 'Escaneo corporal rápido',
+            time: '3 min',
+            tool: 'Ninguna',
+            objective: 'Recorrer mentalmente el cuerpo de pies a cabeza notando tensión y soltándola conscientemente.',
+            steps: [
+              'Cierra los ojos si es posible o baja la mirada.',
+              'Empieza por los pies y sube mentalmente por todo el cuerpo, notando dónde hay tensión.',
+              'Al llegar a cada zona tensa (mandíbula, hombros, manos), suéltala conscientemente.',
+              'Termina en la cabeza, con una respiración profunda final.'
+            ]
+          },
+          {
+            title: 'Autoinstrucción positiva',
+            time: '1 min',
+            tool: 'Ninguna',
+            objective: 'Repetir una frase corta y concreta para reducir el bloqueo inicial.',
+            steps: [
+              'Antes de empezar la evaluación, respira una vez profundo.',
+              "Repite mentalmente una frase corta y concreta: 'puedo resolver esto paso a paso'.",
+              'Léela una vez más al abrir la evaluación, antes de mirar la primera pregunta.',
+              'Empieza por la pregunta que te resulte más fácil, no necesariamente la primera.'
+            ]
+          },
+          {
+            title: 'Semáforo emocional',
+            time: '2 min',
+            tool: 'Ninguna',
+            objective: 'Identificar en qué color emocional estás y aplicar una pausa antes de comenzar la evaluación.',
+            steps: [
+              'Pregúntate en qué color emocional estás: rojo (muy alterado), amarillo (tenso) o verde (tranquilo).',
+              'Si estás en rojo, haz una pausa de 30 segundos de respiración antes de continuar.',
+              'Si estás en amarillo, baja el ritmo: respira 3 veces lento antes de seguir.',
+              'Si estás en verde, simplemente continúa con la evaluación.'
+            ]
+          }
+        ]
       }
     }
   },
@@ -202,7 +349,45 @@ const REFLECTION_THEMES_BY_EMOTION = {
           <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
             <path strokeLinecap="round" strokeLinejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
           </svg>
-        )
+        ),
+        activities: [
+          {
+            title: 'Lista de lo esencial hoy',
+            time: '5 min',
+            tool: 'Cuaderno u hojas',
+            objective: 'Seleccionar solo 3 tareas prioritarias del día para reducir la sensación de estar sobrepasado.',
+            steps: [
+              'Escribe todos tus pendientes del día sin filtrar.',
+              'Marca solo 3 como prioritarias, las que realmente no pueden esperar.',
+              'Tacha o pasa a mañana todo lo demás sin culpa.',
+              'Enfócate únicamente en esas 3 durante el resto del día.'
+            ]
+          },
+          {
+            title: 'Pausa activa con estiramiento',
+            time: '3 min',
+            tool: 'Ninguna',
+            objective: 'Realizar una breve rutina de estiramientos para liberar tensión física acumulada.',
+            steps: [
+              'Ponte de pie y estira los brazos hacia arriba, sosteniendo 10 segundos.',
+              'Rota suavemente el cuello hacia ambos lados.',
+              'Estira la espalda inclinándote levemente hacia adelante.',
+              'Sacude las manos y hombros un momento antes de volver a sentarte.'
+            ]
+          },
+          {
+            title: 'Guion para negociar plazos',
+            time: '5 min',
+            tool: 'Dispositivo digital o papel',
+            objective: 'Redactar un mensaje breve y asertivo para solicitar una extensión o reorganizar una entrega.',
+            steps: [
+              'Identifica a quién necesitas escribirle (docente, compañero, coordinador).',
+              'Redacta el mensaje siguiendo esta estructura: situación breve + lo que necesitas + fecha propuesta.',
+              "Ejemplo: 'Debido a la sobrecarga de esta semana, ¿sería posible entregar el avance el [fecha] en vez del [fecha original]?'",
+              'Revisa el tono (claro y respetuoso, sin exceso de justificación) y envíalo.'
+            ]
+          }
+        ]
       },
       coordinacion_grupal: {
         title: 'Problemas de coordinación grupal',
@@ -211,7 +396,45 @@ const REFLECTION_THEMES_BY_EMOTION = {
           <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
             <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
           </svg>
-        )
+        ),
+        activities: [
+          {
+            title: 'Mapa de roles y responsabilidades',
+            time: '10 min',
+            tool: 'Tabla / Documento compartido',
+            objective: 'Elaborar un cuadro simple que asigne tareas claras a cada integrante del grupo.',
+            steps: [
+              'Haz una tabla con los nombres de todos los integrantes del grupo.',
+              'Frente a cada nombre, anota la tarea específica que le corresponde.',
+              'Agrega una fecha límite individual para cada tarea.',
+              'Comparte la tabla con el grupo para que todos tengan claridad.'
+            ]
+          },
+          {
+            title: 'Técnica DEEC',
+            time: '5 min',
+            tool: 'Ninguna',
+            objective: 'Comunicar el desacuerdo describiendo el hecho, expresando el sentir, especificando la necesidad y la consecuencia positiva.',
+            steps: [
+              "Describe el hecho concreto que te molestó, sin juicios (ej. 'no enviaste tu parte del trabajo').",
+              "Expresa cómo te hizo sentir (ej. 'me generó estrés porque no pude avanzar').",
+              "Especifica lo que necesitas (ej. 'necesito que lo envíes antes del domingo').",
+              "Menciona la consecuencia positiva de hacerlo (ej. 'así podemos entregar con tiempo y sin apuro')."
+            ]
+          },
+          {
+            title: 'Regla de las 24 horas',
+            time: 'Variable',
+            tool: 'Ninguna',
+            objective: 'Esperar antes de responder un mensaje grupal que generó molestia, para evitar una reacción impulsiva.',
+            steps: [
+              'Cuando un mensaje grupal te genere molestia, no respondas de inmediato.',
+              'Cierra el chat y continúa con otra actividad.',
+              'Vuelve a leer el mensaje al día siguiente (o después de varias horas).',
+              'Responde solo cuando puedas hacerlo con calma.'
+            ]
+          }
+        ]
       },
       bajo_rendimiento: {
         title: 'Bajo rendimiento pese al esfuerzo',
@@ -220,7 +443,45 @@ const REFLECTION_THEMES_BY_EMOTION = {
           <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
             <path strokeLinecap="round" strokeLinejoin="round" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6" />
           </svg>
-        )
+        ),
+        activities: [
+          {
+            title: 'Diario de logros pequeños',
+            time: '3 min',
+            tool: 'Nota digital o cuaderno',
+            objective: 'Registrar diariamente un logro, por mínimo que sea, para contrarrestar el foco en lo negativo.',
+            steps: [
+              'Al final del día, abre una nota o cuaderno dedicado a esto.',
+              "Escribe un logro del día, por pequeño que parezca (ej. 'entendí un tema que antes no lograba').",
+              'Evita comparar ese logro con el de otras personas.',
+              'Repite este ejercicio a diario para construir un registro que puedas revisar en días difíciles.'
+            ]
+          },
+          {
+            title: 'Revisión del método de estudio',
+            time: '10 min',
+            tool: 'Hojas de apuntes',
+            objective: 'Analizar si el esfuerzo está bien dirigido (técnica de estudio) y no solo evaluar la cantidad de horas invertidas.',
+            steps: [
+              'Anota cómo estudiaste el último tema que no te salió como esperabas.',
+              'Identifica si el método fue activo (resúmenes, práctica, autoevaluación) o solo pasivo (releer, subrayar).',
+              'Elige una técnica activa nueva para probar la próxima vez (ej. explicar el tema en voz alta, hacer preguntas de práctica).',
+              'Anota el resultado la próxima vez que la uses, para comparar.'
+            ]
+          },
+          {
+            title: 'Diálogo interno compasivo',
+            time: '3 min',
+            tool: 'Ninguna',
+            objective: "Reformular la autocrítica ('soy malo para esto') en un comentario más justo ('estoy aprendiendo, esto toma tiempo').",
+            steps: [
+              "Identifica el pensamiento autocrítico que aparece (ej. 'soy malo para esto').",
+              "Pregúntate: '¿le diría esto a un amigo en la misma situación?'",
+              "Reformúlalo de forma más justa (ej. 'estoy aprendiendo, esto toma tiempo').",
+              'Repite la frase reformulada en voz alta o mental un par de veces.'
+            ]
+          }
+        ]
       }
     }
   },
@@ -236,7 +497,45 @@ const REFLECTION_THEMES_BY_EMOTION = {
           <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
             <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
           </svg>
-        )
+        ),
+        activities: [
+          {
+            title: 'Microobjetivos semanales',
+            time: '8 min',
+            tool: 'Lápiz y papel / Agenda',
+            objective: 'Enfoque en metas alcanzables',
+            steps: [
+              'Escribe el objetivo general del curso o del tema difícil.',
+              'Divídelo en 3 o 4 metas pequeñas que puedas lograr esta semana.',
+              'Asigna un día tentativo para cada una.',
+              'Al final de la semana, marca cuáles lograste, sin enfocarte en lo que falta.'
+            ]
+          },
+          {
+            title: 'Registro de pensamientos automáticos',
+            time: '5 min',
+            tool: 'Cuaderno de notas',
+            objective: 'Reestructuración cognitiva',
+            steps: [
+              "Anota la situación que activó el pensamiento negativo (ej. 'no entendí la clase de hoy').",
+              "Escribe el pensamiento automático tal cual apareció (ej. 'nunca voy a poder con este curso').",
+              'Evalúa qué tan cierto es en una escala del 0 al 100.',
+              "Escribe una respuesta alternativa más equilibrada (ej. 'hoy no entendí, pero puedo repasar y preguntar')."
+            ]
+          },
+          {
+            title: 'Grupo de apoyo entre pares',
+            time: '30 min',
+            tool: 'Presencial o Virtual',
+            objective: 'Estudio colaborativo y contención',
+            steps: [
+              'Identifica a 1 o 2 compañeros del curso difícil.',
+              'Propón una sesión breve de estudio conjunto, presencial o virtual.',
+              'Durante la sesión, cada uno comparte una duda y entre todos intentan resolverla.',
+              'Cierren con un acuerdo de próxima fecha, para que se vuelva un hábito.'
+            ]
+          }
+        ]
       },
       presion_beca: {
         title: 'Presión familiar o por beca',
@@ -245,7 +544,45 @@ const REFLECTION_THEMES_BY_EMOTION = {
           <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
             <path strokeLinecap="round" strokeLinejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
-        )
+        ),
+        activities: [
+          {
+            title: 'Carta de expectativas realistas',
+            time: '10 min',
+            tool: 'Papel y bolígrafo',
+            objective: 'Diferenciar control interno vs externo',
+            steps: [
+              'Escribe una carta breve dirigida a ti mismo.',
+              'Menciona qué esperas realmente de ti este semestre, siendo honesto y realista.',
+              'Diferencia lo que depende de tu esfuerzo de lo que no está en tus manos.',
+              'Guarda la carta y vuelve a leerla cuando sientas mucha presión.'
+            ]
+          },
+          {
+            title: 'Ejercicio de columnas',
+            time: '8 min',
+            tool: 'Lápiz y papel',
+            objective: 'Identificar origen de la presión',
+            steps: [
+              "Dibuja dos columnas en una hoja: 'mis expectativas' y 'expectativas de otros'.",
+              "Anota en cada una lo que corresponda (ej. 'quiero aprender bien' vs 'mi familia espera que sea el mejor de la clase').",
+              'Marca con un color las que sientes que realmente son tuyas.',
+              'Reflexiona: ¿cuánta presión viene de expectativas ajenas que quizás puedes soltar un poco?'
+            ]
+          },
+          {
+            title: 'Relajación muscular progresiva breve',
+            time: '5 min',
+            tool: 'Espacio tranquilo',
+            objective: 'Liberación de tensión física',
+            steps: [
+              'Aprieta con fuerza los puños durante 5 segundos y suelta.',
+              'Sube a los hombros: llévalos hacia las orejas 5 segundos y suelta.',
+              'Tensa el rostro (frunce todo) 5 segundos y relaja.',
+              'Termina con una respiración profunda notando la diferencia entre tensión y relajación.'
+            ]
+          }
+        ]
       },
       presentacion_jurados: {
         title: 'Presentación ante jurados',
@@ -254,7 +591,45 @@ const REFLECTION_THEMES_BY_EMOTION = {
           <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
             <path strokeLinecap="round" strokeLinejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-.553.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
           </svg>
-        )
+        ),
+        activities: [
+          {
+            title: 'Ensayo grabado con autofeedback',
+            time: '10 min',
+            tool: 'Cámara de celular',
+            objective: 'Mejora de desempeño y autopercepción',
+            steps: [
+              'Graba con tu celular una práctica corta de tu presentación (2-3 minutos).',
+              'Vuelve a verla una sola vez, sin juzgarte de más.',
+              'Anota un aspecto positivo que notaste.',
+              'Anota un aspecto a mejorar y practica solo esa parte una vez más.'
+            ]
+          },
+          {
+            title: 'Anclaje somático',
+            time: '3 min',
+            tool: 'Ninguna',
+            objective: 'Inducción corporal de calma',
+            steps: [
+              'Piensa en un recuerdo donde te sentiste tranquilo y seguro.',
+              'Mientras revives ese recuerdo, junta el pulgar y el índice de una mano con firmeza.',
+              'Mantén el gesto 15-20 segundos mientras sientes esa calma.',
+              'Repite el gesto justo antes de tu presentación para reactivar esa sensación.'
+            ]
+          },
+          {
+            title: "Pregunta 'peor escenario'",
+            time: '5 min',
+            tool: 'Lápiz y papel',
+            objective: 'Reducción de incertidumbre y catastrofismo',
+            steps: [
+              "Escribe: '¿qué es lo peor que podría pasar en esta presentación?'",
+              'Responde con honestidad, sin minimizar ni exagerar.',
+              "Escribe después: '¿qué haría si eso pasara?'",
+              'Nota cómo, al tener un plan, el miedo suele bajar de intensidad.'
+            ]
+          }
+        ]
       }
     }
   },
@@ -267,10 +642,58 @@ const REFLECTION_THEMES_BY_EMOTION = {
         title: 'Repetir un curso',
         message: 'Hola! Veo que has seleccionado que sientes desesperanza por repetir un curso. Volver a intentarlo no es un retroceso, es otra oportunidad con más experiencia de la que tenías antes. Ahora veamos algunas actividades que te ayuden a cambiar este sentimiento y poder autorregularte de una mejor manera',
         icon: (
-          <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.27 15C20.25 18.25 17 21 12 21" />
+          <svg
+            className="w-5 h-5 text-white transition-transform duration-300 group-hover:rotate-180"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth="2.5"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99"
+            />
           </svg>
-        )
+        ),
+        activities: [
+          {
+            title: 'Reencuadre narrativo del fracaso',
+            time: '8 min',
+            tool: 'Lápiz y papel',
+            objective: 'Cambio de perspectiva',
+            steps: [
+              'Escribe brevemente qué pasó con el curso, sin adornar ni minimizar.',
+              'Anota qué aprendiste de esa experiencia (sobre estudio, tiempo, o sobre ti mismo).',
+              "Escribe una frase que resuma el aprendizaje (ej. 'aprendí que necesito empezar antes').",
+              'Guarda esa frase como recordatorio para el nuevo intento.'
+            ]
+          },
+          {
+            title: 'Línea de tiempo de logros',
+            time: '10 min',
+            tool: 'Lápiz y papel',
+            objective: 'Evidencia de capacidad',
+            steps: [
+              'Dibuja una línea horizontal en una hoja.',
+              'Marca en ella 4 o 5 logros académicos pasados, sin importar cuán pequeños sean.',
+              'Anota brevemente qué hiciste para lograr cada uno.',
+              'Observa la línea completa como evidencia de tu capacidad, no solo del curso actual.'
+            ]
+          },
+          {
+            title: 'Meta pequeña de la semana',
+            time: '3 min',
+            tool: 'Lápiz y papel / Nota digital',
+            objective: 'Activación conductual',
+            steps: [
+              'Piensa en el curso que vas a repetir.',
+              "Define un único objetivo alcanzable para esta semana (ej. 'asistir a todas las clases').",
+              'Escríbelo en un lugar visible.',
+              'Al final de la semana, revisa si lo cumpliste antes de definir la meta siguiente.'
+            ]
+          }
+        ]
       },
       atraso_malla: {
         title: 'Atraso en la malla curricular',
@@ -279,16 +702,102 @@ const REFLECTION_THEMES_BY_EMOTION = {
           <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
             <path strokeLinecap="round" strokeLinejoin="round" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
           </svg>
-        )
+        ),
+        activities: [
+          {
+            title: 'Guía de preguntas para tutoría',
+            time: '10 min',
+            tool: 'Lápiz y papel',
+            objective: 'Planificación proactiva',
+            steps: [
+              'Anota tu situación actual en la malla (qué cursos llevas de atraso).',
+              "Escribe 3 preguntas concretas para tu tutor académico (ej. '¿qué opciones tengo para nivelarme este año?').",
+              'Agenda la cita o envía el mensaje para solicitarla.',
+              'Lleva las preguntas escritas a la reunión para no olvidarlas por los nervios.'
+            ]
+          },
+          {
+            title: 'Técnica de des-comparación',
+            time: '5 min',
+            tool: 'Ninguna',
+            objective: 'Foco en progreso personal',
+            steps: [
+              'Nota el momento en que te comparas con el ritmo de otros compañeros.',
+              "Detente y pregúntate: '¿esto me está ayudando o solo generando más presión?'",
+              "Reemplaza la comparación con una pregunta sobre ti mismo: '¿avancé algo esta semana respecto a mí mismo?'",
+              'Anota una diferencia positiva de ti mismo, aunque sea mínima.'
+            ]
+          },
+          {
+            title: 'Ejercicio de valores personales',
+            time: '10 min',
+            tool: 'Lápiz y papel',
+            objective: 'Reconexión motivacional',
+            steps: [
+              "Escribe: '¿para qué estudio esta carrera?' sin pensarlo demasiado, solo escribe lo primero que surja.",
+              'Revisa lo escrito y subraya las palabras que representen lo que realmente te importa (ayudar, crear, aprender, etc).',
+              'Escribe una frase corta que conecte tu día a día actual con ese motivo de fondo.',
+              'Guárdala para leerla en momentos de desmotivación.'
+            ]
+          }
+        ]
       },
       esfuerzo_sin_resultados: {
         title: 'Esfuerzo sin resultados visibles',
         message: 'Hola! Veo que has seleccionado que sientes desesperanza por sentir que nada cambia. A veces los resultados tardan más en notarse de lo que esperamos, pero eso no significa que no estén ocurriendo. Ahora veamos algunas actividades que te ayuden a cambiar este sentimiento y poder autorregularte de una mejor manera',
         icon: (
-          <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M18.364 5.636a9 9 0 01-12.728 0m12.728 0L5.636 18.364m12.728-12.728L5.636 5.636m12.728 12.728a9 9 0 01-12.728 0" />
+          <svg
+            className="w-5 h-5 text-white"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth="2.5"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
           </svg>
-        )
+        ),
+        activities: [
+          {
+            title: 'Registro de proceso',
+            time: '3 min',
+            tool: 'Lápiz y papel / Nota digital',
+            objective: 'Visibilización del esfuerzo',
+            steps: [
+              'Al final del día, anota qué acciones concretas hiciste (no el resultado, sino el esfuerzo).',
+              "Ejemplo: 'estudié 1 hora', 'hice 10 ejercicios de práctica'.",
+              'Revisa el registro cada semana para ver el esfuerzo acumulado.',
+              'Recuerda que los resultados suelen aparecer después del proceso, no en paralelo.'
+            ]
+          },
+          {
+            title: 'Solicitud de feedback externo',
+            time: '5 min',
+            tool: 'Dispositivo digital o papel',
+            objective: 'Retroalimentación específica',
+            steps: [
+              'Piensa en un docente o compañero que pueda darte una opinión honesta.',
+              "Redacta un mensaje breve pidiendo retroalimentación específica (ej. '¿qué podría mejorar en mis exámenes?', no solo '¿cómo lo hice?').",
+              'Envíalo y agenda mentalmente revisar la respuesta con apertura, no a la defensiva.',
+              'Anota 1 acción concreta que puedas aplicar con ese feedback.'
+            ]
+          },
+          {
+            title: 'Gratitud y logros diarios',
+            time: '3 min',
+            tool: 'Cuaderno de notas',
+            objective: 'Equilibrio de perspectiva',
+            steps: [
+              'Antes de dormir, escribe 3 cosas del día.',
+              'Al menos una debe ser un logro, por mínimo que sea.',
+              'Las otras dos pueden ser cosas por las que te sientes agradecido, académicas o no.',
+              'Repite el ejercicio a diario para construir una perspectiva más equilibrada con el tiempo.'
+            ]
+          }
+        ]
       }
     }
   }
@@ -508,16 +1017,19 @@ const ACTIVITIES_BY_EMOTION = {
 const FAQ_ITEMS = [
   {
     id: 'anonimo',
+    color: '#7AA6C3',
     question: '¿Mis respuestas son anónimas?',
     answer: 'Sí, absolutamente. Toda la información y autoevaluaciones que realizas se procesan de forma local en tu navegador. MindCampus no almacena ni comparte tus respuestas con terceros o entidades universitarias.'
   },
   {
     id: 'psicologo',
+    color: '#66D596',
     question: '¿Esto reemplaza a un psicólogo?',
     answer: 'No. Esta plataforma es una herramienta de apoyo, primer contacto y gestión de autoconocimiento emocional. No sustituye de ninguna manera un tratamiento, terapia clínica o el diagnóstico de un profesional de la salud mental.'
   },
   {
     id: 'costo',
+    color: '#D38EF0',
     question: '¿Tiene algún costo?',
     answer: 'No, la plataforma es 100% gratuita y de acceso libre para la comunidad estudiantil como parte de las iniciativas de bienestar universitario.'
   }
@@ -659,16 +1171,24 @@ export default function App() {
   const handleFeedbackSubmit = (e) => {
     e.preventDefault();
     console.log('Feedback enviado:', feedbackForm);
-    alert('¡Gracias por tus comentarios! Nos ayudan a mejorar MindCampus.');
     setFeedbackForm({ name: '', career: '', message: '' });
   };
 
+  // 1. Tus selectores de datos adaptados a la nueva estructura anidada
   const currentEmotionKey = getThemeKey(selectedEmotion);
   const currentEmotionData = REFLECTION_THEMES_BY_EMOTION[currentEmotionKey] || REFLECTION_THEMES_BY_EMOTION['agobio'];
-  const themesToDisplay = currentEmotionData.themes;
-  const activeThemeData = themesToDisplay[selectedTheme] || Object.values(themesToDisplay)[0];
-  const currentActivitiesData = ACTIVITIES_BY_EMOTION[currentEmotionKey] || ACTIVITIES_BY_EMOTION['agobio'];
 
+  const themesToDisplay = currentEmotionData.themes;
+  // Aquí obtenemos toda la data del subtema (que ahora incluye sus propias actividades)
+  const activeThemeData = themesToDisplay[selectedTheme] || Object.values(themesToDisplay)[0];
+
+  // Extraemos el arreglo de actividades de este subtema específico (fallback a un arreglo vacío si no hay)
+  const activitiesList = activeThemeData.activities || [];
+
+  // Si deseas mostrar en la "Ficha de Enfoque" un resumen global de las actividades del tema activo:
+  const totalTiempo = activitiesList.map(a => a.time).join(' + ') || 'N/A';
+  const herramientasUtilizadas = [...new Set(activitiesList.map(a => a.tool))].join(', ') || 'Ninguna';
+  const objetivoPrincipal = activitiesList[0]?.objective || 'Autorregulación';
   const moodToY = {
     Exc: 40,
     Bin: 75,
@@ -691,8 +1211,32 @@ export default function App() {
 
 
 
+
+
+
+    // Estado local para disparar el mensaje de éxito neobrutalista
+    const [showSuccessMessage, setShowSuccessMessage] = React.useState(false);
+
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      
+      // 1. Ejecutas tu lógica existente (si guarda en base de datos o estado global)
+      if (typeof handleFeedbackSubmit === 'function') {
+        handleFeedbackSubmit(e);
+      }
+
+      // 2. Activamos el cartel de respuesta
+      setShowSuccessMessage(true);
+
+      // 3. Temporizador de 2.5 segundos para leer el mensaje y redirigir a INICIO
+      setTimeout(() => {
+        // Redirección directa al ID o ruta de inicio
+        window.location.href = '#inicio'; 
+      }, 2500);
+    };
+
   return (
-    <div className="min-h-screen bg-[#f3f3f3] text-neutral-800 font-sans p-4 md:p-8 flex flex-col justify-between antialiased">
+    <div className="min-h-screen bg-[#FFF5E2] text-neutral-800 font-sans p-4 md:p-8 flex flex-col justify-between antialiased">
 
       {/* Header */}
       <header className="w-full max-w-7xl mx-auto bg-white border-2 border-black px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-4 mb-8 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
@@ -872,10 +1416,12 @@ export default function App() {
               <h1 className="text-4xl font-extrabold tracking-tight text-neutral-900">
                 Actividades sugeridas para ti
               </h1>
-              <p className="text-xs text-neutral-500 font-medium">Recomendaciones personalizadas basadas en tu autoevaluación actual.</p>
+              <p className="text-xs text-neutral-500 font-medium">
+                Recomendaciones personalizadas para afrontar el reto de: <strong>{activeThemeData.title}</strong>
+              </p>
             </div>
 
-            {/* Ficha de Enfoque */}
+            {/* Ficha de Enfoque Dinámica */}
             <div className="bg-white border-2 border-black p-5 md:p-6 rounded-[2rem] shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
               <div className="flex flex-col gap-1">
                 <span className="text-[10px] font-black uppercase tracking-widest text-neutral-400">Estado de Ánimo</span>
@@ -883,34 +1429,103 @@ export default function App() {
               </div>
               <div className="flex flex-col gap-1">
                 <span className="text-[10px] font-black uppercase tracking-widest text-neutral-400">Tiempo Estimado</span>
-                <span className="text-sm font-bold text-neutral-700">{currentActivitiesData.tiempo}</span>
+                <span className="text-sm font-bold text-neutral-700">{totalTiempo}</span>
               </div>
               <div className="flex flex-col gap-1">
-                <span className="text-[10px] font-black uppercase tracking-widest text-neutral-400">Herramienta</span>
-                <span className="text-sm font-bold text-neutral-700">{currentActivitiesData.herramienta}</span>
+                <span className="text-[10px] font-black uppercase tracking-widest text-neutral-400">Herramientas</span>
+                <span className="text-sm font-bold text-neutral-700 truncate" title={herramientasUtilizadas}>
+                  {herramientasUtilizadas}
+                </span>
               </div>
               <div className="flex flex-col gap-1">
                 <span className="text-[10px] font-black uppercase tracking-widest text-neutral-400">Objetivo Principal</span>
-                <span className="text-sm font-bold text-neutral-700">{currentActivitiesData.objetivo}</span>
+                <span className="text-sm font-bold text-neutral-700">{objetivoPrincipal}</span>
               </div>
             </div>
 
+            {/* Grid de Actividades del Tema */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {currentActivitiesData.activities.map((act, index) => (
-                <div key={index} className="bg-white border-2 border-neutral-300 p-6 flex flex-col justify-between min-h-[300px] rounded-sm relative group hover:border-black transition-colors shadow-[4px_4px_0px_0px_rgba(0,0,0,0.05)]">
-                  <div className="space-y-4">
-                    <div className="w-8 h-8 rounded-full bg-black flex items-center justify-center text-white text-xs font-black">{index + 1}</div>
-                    <h3 className="font-black text-sm uppercase tracking-wider text-black">{act.title}</h3>
-                    <p className="text-neutral-500 text-xs font-medium leading-relaxed">{act.description}</p>
-                  </div>
-                  <button
-                    onClick={() => setActiveActivity(act)}
-                    className="w-full mt-8 bg-black text-white text-xs font-bold uppercase py-3 rounded-full flex items-center justify-center gap-2 hover:bg-neutral-900 transition-colors active:scale-[0.98]"
+              {activitiesList.map((act, index) => {
+                // Usamos las variables que ya existen arriba en tu componente App
+                const emotionColor = currentEmotionData?.color || '#000000';
+
+                return (
+                  <div
+                    key={index}
+                    className="bg-white border-2 border-black p-6 flex flex-col justify-between min-h-[350px] rounded-sm relative group transition-all duration-200 hover:-translate-y-1"
+                    style={{
+                      boxShadow: `8px 8px 0px 0px ${emotionColor}`
+                    }}
                   >
-                    <span>➤</span> Iniciar Guía
-                  </button>
-                </div>
-              ))}
+                    <div className="space-y-4">
+                      {/* Header de la tarjeta: Badge e Información de herramientas */}
+                      <div className="flex items-center justify-between">
+                        <div
+                          className="w-8 h-8 rounded-full border-2 border-black flex items-center justify-center text-black text-xs font-black"
+                          style={{ backgroundColor: emotionColor }}
+                        >
+                          {index + 1}
+                        </div>
+                        <div className="flex gap-1.5">
+                          <span className="bg-neutral-100 border border-neutral-300 text-neutral-800 text-[10px] font-black px-2 py-0.5 uppercase tracking-wider rounded-sm">
+                            ⏱️ {act.time}
+                          </span>
+                        </div>
+                      </div>
+
+                      {/* Título de la actividad */}
+                      <h3 className="font-black text-base uppercase tracking-tight text-black line-clamp-2 pt-1">
+                        {act.title}
+                      </h3>
+
+                      {/* Herramienta requerida */}
+                      <div className="flex items-center gap-1.5 text-neutral-600">
+                        <span className="text-xs">🛠️</span>
+                        <span className="text-[11px] font-bold uppercase tracking-wide text-neutral-500 truncate max-w-full">
+                          {act.tool}
+                        </span>
+                      </div>
+
+                      <hr className="border-dashed border-neutral-300" />
+
+                      {/* Objetivo específico */}
+                      <div className="text-neutral-600 text-xs font-medium leading-relaxed">
+                        <span className="font-black text-black text-[11px] block uppercase tracking-wider mb-1">
+                          Enfoque:
+                        </span>
+                        <p className="line-clamp-3">{act.objective}</p>
+                      </div>
+                    </div>
+
+                    <div className="space-y-2 pt-6">
+                      {/* Indicador de pasos */}
+                      <span className="text-[10px] font-bold text-neutral-400 uppercase tracking-widest block text-center">
+                        Contiene {act.steps?.length || 0} pasos interactivos
+                      </span>
+
+                      {/* Botón dinámico */}
+                      <button
+                        onClick={() => setActiveActivity(act)}
+                        className="w-full bg-black text-white text-xs font-black uppercase py-3 border-2 border-black rounded-sm flex items-center justify-center gap-2 transition-all active:translate-x-0.5 active:translate-y-0.5"
+                        style={{
+                          boxShadow: '2px 2px 0px 0px #000000',
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.backgroundColor = emotionColor;
+                          e.currentTarget.style.color = '#000000';
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.backgroundColor = '#000000';
+                          e.currentTarget.style.color = '#FFFFFF';
+                        }}
+                      >
+                        <span>INICIAR GUÍA</span>
+                        <span className="group-hover:translate-x-1 transition-transform">→</span>
+                      </button>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
         )}
@@ -1095,15 +1710,30 @@ export default function App() {
                 <div className="flex flex-col gap-4">
                   {FAQ_ITEMS.map((item) => {
                     const isOpen = openFaq === item.id;
+                    // Capturamos el color específico asignado a este item en el arreglo
+                    const faqColor = item.color || '#000000';
+
                     return (
-                      <div key={item.id} className="w-full transition-all duration-200">
+                      <div
+                        key={item.id}
+                        className="w-full transition-all duration-200"
+                      >
+                        {/* Botón de la Pregunta */}
                         <button
                           onClick={() => toggleFaq(item.id)}
-                          className="w-full bg-black text-white px-6 py-4 rounded-full flex items-center justify-between text-left font-bold transition-transform active:scale-[0.99]"
+                          className="w-full text-black px-6 py-4 rounded-sm border-2 border-black flex items-center justify-between text-left font-black transition-all active:translate-x-0.5 active:translate-y-0.5 active:shadow-none"
+                          style={{
+                            // El fondo cambia a su color asignado si está abierto; si está cerrado, es blanco.
+                            backgroundColor: isOpen ? faqColor : '#FFFFFF',
+                            // Sombra dura neobrutalista permanente con el color del item
+                            boxShadow: isOpen ? '2px 2px 0px 0px #000000' : `4px 4px 0px 0px ${faqColor}`
+                          }}
                         >
-                          <span className="text-xs md:text-sm uppercase tracking-wide">{item.question}</span>
+                          <span className="text-xs md:text-sm uppercase tracking-wider">
+                            {item.question}
+                          </span>
                           <svg
-                            className={`w-4 h-4 transform transition-transform duration-200 ${isOpen ? 'rotate-180' : 'rotate-0'}`}
+                            className={`w-4 h-4 flex-shrink-0 transform transition-transform duration-200 ${isOpen ? 'rotate-180' : 'rotate-0'}`}
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor"
@@ -1113,12 +1743,18 @@ export default function App() {
                           </svg>
                         </button>
 
-                        {/* Contenido colapsable */}
+                        {/* Contenido colapsable de la Respuesta */}
                         <div
-                          className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-40 opacity-100 mt-2' : 'max-h-0 opacity-0'
+                          className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-60 opacity-100 mt-2' : 'max-h-0 opacity-0'
                             }`}
                         >
-                          <div className="px-6 py-3 bg-neutral-50 border border-neutral-200 rounded-2xl text-xs font-medium text-neutral-600 leading-relaxed shadow-sm">
+                          <div
+                            className="px-6 py-4 bg-white border-2 border-black rounded-sm text-xs font-bold text-neutral-800 leading-relaxed"
+                            style={{
+                              // Sombra dura que acompaña a la respuesta abierta
+                              boxShadow: `4px 4px 0px 0px ${faqColor}`
+                            }}
+                          >
                             {item.answer}
                           </div>
                         </div>
@@ -1128,57 +1764,115 @@ export default function App() {
                 </div>
               </div>
 
-              {/* Bloque Derecho: Formulario Premium de Sugerencia */}
-              <div className="lg:col-span-6 bg-[#e9e9e9]/70 border-2 border-neutral-300 p-6 md:p-8 rounded-[2rem] shadow-[4px_4px_0px_0px_rgba(0,0,0,0.02)]">
-                <form onSubmit={handleFeedbackSubmit} className="space-y-4">
-                  <div className="flex items-center gap-2.5 text-neutral-900 font-extrabold text-sm uppercase tracking-wide mb-2">
-                    <svg className="w-4 h-4 text-black transform rotate-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                    </svg>
-                    Envianos un mensaje de sugerencia
-                  </div>
+              {/* Bloque Derecho: Formulario de Reflexión Premium */}
+             <div className="lg:col-span-6 bg-white border-2 border-black p-6 md:p-8 rounded-sm shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] relative overflow-hidden">
+        
+        {/* CAPA DE RESPUESTA NEOBRUTALISTA */}
+        {showSuccessMessage && (
+          <div className="absolute inset-0 bg-[#FFF5E2] border-2 border-black z-50 flex flex-col items-center justify-center p-6 text-center animate-fade-in">
+            <div className="w-16 h-16 bg-black text-white rounded-full flex items-center justify-center text-2xl font-black mb-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] border-2 border-black">
+              ✓
+            </div>
+            <h3 className="text-2xl font-black text-black uppercase tracking-tight mb-2">
+              ¡REFLEXIÓN GUARDADA!
+            </h3>
+            <p className="text-black font-bold max-w-sm text-sm md:text-base leading-snug uppercase tracking-tight">
+              Tu mente está lista. Regresando al inicio...
+            </p>
+            <div className="mt-6 w-16 h-2 bg-black border border-black animate-pulse"></div>
+          </div>
+        )}
 
-                  {/* Fila de Inputs: Nombre y Carrera */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    <input
-                      type="text"
-                      placeholder="Tu nombre"
-                      required
-                      value={feedbackForm.name}
-                      onChange={(e) => setFeedbackForm({ ...feedbackForm, name: e.target.value })}
-                      className="w-full bg-[#f4f4f4] border border-neutral-400 rounded-full px-5 py-2.5 text-xs font-medium text-neutral-800 placeholder-neutral-400 focus:outline-none focus:border-black transition-colors"
-                    />
-                    <input
-                      type="text"
-                      placeholder="Tu carrera"
-                      required
-                      value={feedbackForm.career}
-                      onChange={(e) => setFeedbackForm({ ...feedbackForm, career: e.target.value })}
-                      className="w-full bg-[#f4f4f4] border border-neutral-400 rounded-full px-5 py-2.5 text-xs font-medium text-neutral-800 placeholder-neutral-400 focus:outline-none focus:border-black transition-colors"
-                    />
-                  </div>
+        {/* FORMULARIO */}
+        <form onSubmit={handleSubmit} className="space-y-5">
 
-                  {/* Cuadro de Mensaje */}
-                  <div>
-                    <textarea
-                      rows="4"
-                      placeholder="¿Como crees que podemos mejorar MindCampus?"
-                      required
-                      value={feedbackForm.message}
-                      onChange={(e) => setFeedbackForm({ ...feedbackForm, message: e.target.value })}
-                      className="w-full bg-[#f4f4f4] border border-neutral-400 rounded-3xl px-5 py-4 text-xs font-medium text-neutral-800 placeholder-neutral-400 focus:outline-none focus:border-black resize-none transition-colors"
-                    ></textarea>
-                  </div>
+          {/* Header con Icono de Avión de Papel */}
+          <div className="flex items-center gap-2.5 text-black font-black text-lg md:text-xl uppercase tracking-wider mb-2">
+            <svg
+              className="w-5 h-5 text-black transform rotate-12 flex-shrink-0 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-0.5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth="2.5"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"
+              />
+            </svg>
+            <h2>Reflexionemos antes de irte</h2>
+          </div>
 
-                  {/* Botón de Envío */}
-                  <button
-                    type="submit"
-                    className="w-full bg-black hover:bg-neutral-900 text-white text-xs font-bold uppercase py-3.5 rounded-full tracking-wider transition-colors shadow-sm active:scale-[0.995]"
-                  >
-                    Enviar Comentarios
-                  </button>
-                </form>
+          {/* Grupo de Preguntas e Inputs */}
+          <div className="space-y-4">
+            {/* Pregunta 1 */}
+            <div className="space-y-1.5">
+              <div className="flex items-center gap-2 px-2">
+                <span className="text-black font-black text-base">•</span>
+                <label className="text-neutral-700 text-sm font-bold tracking-tight">
+                  ¿Menoró tu emoción elegida?
+                </label>
               </div>
+              <input
+                type="text"
+                placeholder="Escribe tu respuesta aquí..."
+                required
+                value={feedbackForm.emotionReflection || ''}
+                onChange={(e) => setFeedbackForm({ ...feedbackForm, emotionReflection: e.target.value })}
+                className="w-full bg-white border-2 border-black rounded-full px-5 py-3 text-sm font-medium text-black placeholder-neutral-400 focus:outline-none bg-white/90 transition-all shadow-[0px_4px_12px_rgba(0,0,0,0.02)]"
+              />
+            </div>
+
+            {/* Pregunta 2 */}
+            <div className="space-y-1.5">
+              <div className="flex items-center gap-2 px-2">
+                <span className="text-black font-black text-base">•</span>
+                <label className="text-neutral-700 text-sm font-bold tracking-tight">
+                  ¿Cómo te sientes ahora?
+                </label>
+              </div>
+              <input
+                type="text"
+                placeholder="Describe tu estado actual..."
+                required
+                value={feedbackForm.currentFeeling || ''}
+                onChange={(e) => setFeedbackForm({ ...feedbackForm, currentFeeling: e.target.value })}
+                className="w-full bg-white border-2 border-black rounded-full px-5 py-3 text-sm font-medium text-black placeholder-neutral-400 focus:outline-none bg-white/90 transition-all shadow-[0px_4px_12px_rgba(0,0,0,0.02)]"
+              />
+            </div>
+
+            {/* Pregunta 3 */}
+            <div className="space-y-1.5">
+              <div className="flex items-center gap-2 px-2">
+                <span className="text-black font-black text-base">•</span>
+                <label className="text-neutral-700 text-sm font-bold tracking-tight">
+                  ¿Estás listo/a para volver a tus actividades?
+                </label>
+              </div>
+              <input
+                type="text"
+                placeholder="Sí / No, ¿por qué?..."
+                required
+                value={feedbackForm.readyToReturn || ''}
+                onChange={(e) => setFeedbackForm({ ...feedbackForm, readyToReturn: e.target.value })}
+                className="w-full bg-white border-2 border-black rounded-full px-5 py-3 text-sm font-medium text-black placeholder-neutral-400 focus:outline-none bg-white/90 transition-all shadow-[0px_4px_12px_rgba(0,0,0,0.02)]"
+              />
+            </div>
+          </div>
+
+          {/* Botón de Envío */}
+          <div className="pt-2">
+            <button
+              type="submit"
+              className="w-full bg-black hover:bg-neutral-900 text-white text-sm font-black uppercase py-4 rounded-full tracking-wide transition-all border-2 border-black shadow-[0px_6px_20px_rgba(0,0,0,0.25)] active:translate-y-0.5 active:shadow-md"
+            >
+              Tu bienestar impulsa tu éxito.
+            </button>
+          </div>
+
+        </form>
+      </div>
 
             </div>
           </div>
@@ -1188,7 +1882,7 @@ export default function App() {
       {/* Footer */}
       <footer className="w-full max-w-7xl mx-auto flex items-center justify-between text-[11px] font-bold tracking-widest text-neutral-400 uppercase">
         <div>@MINDCAMPUS</div>
-        <div>PAGE 1</div>
+        <div>PAGE</div>
       </footer>
 
       {/* MODAL */}
@@ -1277,8 +1971,8 @@ export default function App() {
                             backgroundColor: isCurrent ? '#000000' : emotionColor
                           }}
                           className={`w-full flex items-center gap-4 px-5 py-4 rounded-full border-2 border-black text-left font-bold transition-all duration-150 group ${isCurrent
-                              ? 'text-white shadow-none translate-x-0.5 translate-y-0.5'
-                              : 'text-black hover:brightness-95 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]'
+                            ? 'text-white shadow-none translate-x-0.5 translate-y-0.5'
+                            : 'text-black hover:brightness-95 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]'
                             }`}
                         >
                           <div className={`p-2 rounded-full border transition-colors duration-150 ${isCurrent ? 'bg-neutral-900 border-neutral-700' : 'bg-white border-black'
@@ -1321,86 +2015,118 @@ export default function App() {
         const totalSteps = activeActivity.steps.length;
         const isLast = activeStep >= totalSteps;
         const progress = isLast ? 100 : Math.round(((activeStep) / totalSteps) * 100);
+
+        // Captura del color dinámico seguro de la emoción actual
+        const emotionColor = currentEmotionData?.color || '#000000';
+
         return (
           <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+            {/* Backdrop */}
             <div
               className="absolute inset-0 bg-neutral-900/60 backdrop-blur-sm"
               onClick={() => { setActiveActivity(null); setActiveStep(0); }}
             />
-            <div className="bg-white border-2 border-black rounded-3xl max-w-md w-full relative z-10 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] animate-in fade-in zoom-in-95 duration-200">
+
+            {/* Contenedor Modal Neobrutalista */}
+            <div
+              className="bg-white border-2 border-black rounded-sm max-w-md w-full relative z-10 animate-in fade-in zoom-in-95 duration-200"
+              style={{
+                boxShadow: `8px 8px 0px 0px ${emotionColor}`
+              }}
+            >
               {/* Header */}
-              <div className="p-6 border-b-2 border-neutral-100">
+              <div className="p-6 border-b-2 border-black">
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex-1">
-                    <p className="text-[10px] font-black uppercase tracking-widest text-neutral-400 mb-0.5">Guía paso a paso</p>
-                    <h2 className="text-base font-extrabold text-neutral-900 uppercase tracking-tight leading-tight">{activeActivity.title}</h2>
+                    <p className="text-[10px] font-black uppercase tracking-widest text-neutral-400 mb-0.5">
+                      Guía paso a paso
+                    </p>
+                    <h2 className="text-base font-black text-black uppercase tracking-tight leading-tight">
+                      {activeActivity.title}
+                    </h2>
                   </div>
                   <button
                     onClick={() => { setActiveActivity(null); setActiveStep(0); }}
-                    className="flex-shrink-0 w-8 h-8 rounded-full border-2 border-neutral-200 flex items-center justify-center text-neutral-400 hover:border-black hover:text-black transition-all text-sm font-bold"
+                    className="flex-shrink-0 w-8 h-8 rounded-full border-2 border-black flex items-center justify-center text-black hover:bg-neutral-100 transition-all text-sm font-black"
                   >
                     ✕
                   </button>
                 </div>
-                {/* Barra de progreso */}
+
+                {/* Barra de progreso dinámica */}
                 <div className="mt-4">
-                  <div className="flex justify-between text-[10px] font-black uppercase tracking-widest text-neutral-400 mb-1.5">
-                    <span>{isLast ? 'Completado' : `Paso ${activeStep + 1} de ${totalSteps}`}</span>
+                  <div className="flex justify-between text-[10px] font-black uppercase tracking-widest text-neutral-500 mb-1.5">
+                    <span>{isLast ? 'Completado 🎉' : `Paso ${activeStep + 1} de ${totalSteps}`}</span>
                     <span>{progress}%</span>
                   </div>
-                  <div className="w-full h-1.5 bg-neutral-100 rounded-full overflow-hidden">
+                  <div className="w-full h-3 bg-neutral-100 border-2 border-black rounded-full overflow-hidden">
                     <div
-                      className="h-full bg-black rounded-full transition-all duration-500"
-                      style={{ width: `${progress}%` }}
+                      className="h-full transition-all duration-500"
+                      style={{
+                        width: `${progress}%`,
+                        backgroundColor: emotionColor
+                      }}
                     />
                   </div>
                 </div>
               </div>
 
               {/* Contenido del paso */}
-              <div className="p-6 min-h-[200px] flex flex-col justify-center">
+              <div className="p-6 min-h-[200px] flex flex-col justify-center border-b-2 border-black">
                 {isLast ? (
                   <div className="text-center py-4">
-                    <div className="w-16 h-16 rounded-full bg-black flex items-center justify-center mx-auto mb-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.2)]">
-                      <span className="text-2xl">✓</span>
+                    <div
+                      className="w-16 h-16 rounded-full border-2 border-black flex items-center justify-center mx-auto mb-4 shadow-[4px_4px_0px_0px_#000000]"
+                      style={{ backgroundColor: emotionColor }}
+                    >
+                      <span className="text-2xl font-black text-black">✓</span>
                     </div>
-                    <h3 className="text-lg font-extrabold text-neutral-900 uppercase tracking-tight mb-2">¡Actividad completada!</h3>
-                    <p className="text-xs font-medium text-neutral-500 leading-relaxed max-w-xs mx-auto">
+                    <h3 className="text-lg font-black text-black uppercase tracking-tight mb-2">
+                      ¡Actividad completada!
+                    </h3>
+                    <p className="text-xs font-bold text-neutral-600 leading-relaxed max-w-xs mx-auto">
                       Has terminado todos los pasos de esta guía. ¡Buen trabajo tomando acción por tu bienestar!
                     </p>
                   </div>
                 ) : (
                   <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-black border-2 border-black flex items-center justify-center text-white text-sm font-black shadow-[3px_3px_0px_0px_rgba(0,0,0,0.25)]">
+                    {/* Badge del número del paso actual con color de emoción */}
+                    <div
+                      className="flex-shrink-0 w-10 h-10 rounded-full border-2 border-black flex items-center justify-center text-black text-sm font-black shadow-[3px_3px_0px_0px_#000000]"
+                      style={{ backgroundColor: emotionColor }}
+                    >
                       {String(activeStep + 1).padStart(2, '0')}
                     </div>
-                    <p className="text-sm font-medium text-neutral-800 leading-relaxed pt-2">
+                    <p className="text-sm font-bold text-neutral-800 leading-relaxed pt-1.5">
                       {activeActivity.steps[activeStep]}
                     </p>
                   </div>
                 )}
               </div>
 
-              {/* Miniaturas de todos los pasos */}
+              {/* Miniaturas interactivas inferiores */}
               {!isLast && (
-                <div className="px-6 pb-2 flex gap-1.5 flex-wrap">
+                <div className="px-6 pt-4 flex gap-2 flex-wrap justify-center">
                   {activeActivity.steps.map((_, i) => (
                     <button
                       key={i}
                       onClick={() => setActiveStep(i)}
-                      className={`h-1.5 rounded-full transition-all duration-300 ${i === activeStep ? 'w-6 bg-black' : i < activeStep ? 'w-3 bg-neutral-400' : 'w-3 bg-neutral-200'
-                        }`}
+                      className="h-3 border-2 border-black rounded-full transition-all duration-300"
+                      style={{
+                        width: i === activeStep ? '24px' : '12px',
+                        backgroundColor: i === activeStep ? emotionColor : i < activeStep ? '#A3A3A3' : '#E5E5E5'
+                      }}
                     />
                   ))}
                 </div>
               )}
 
               {/* Footer Navegación */}
-              <div className="p-6 pt-4 flex gap-3">
+              <div className="p-6 flex gap-3">
                 {!isLast && activeStep > 0 && (
                   <button
                     onClick={() => setActiveStep(s => s - 1)}
-                    className="flex-1 border-2 border-black text-black text-xs font-bold uppercase py-3 rounded-full hover:bg-neutral-50 transition-colors active:scale-[0.98]"
+                    className="flex-1 bg-white border-2 border-black text-black text-xs font-black uppercase py-3 rounded-sm hover:bg-neutral-50 transition-colors shadow-[2px_2px_0px_0px_#000000] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none"
                   >
                     ← Anterior
                   </button>
@@ -1408,14 +2134,14 @@ export default function App() {
                 {isLast ? (
                   <button
                     onClick={() => { setActiveActivity(null); setActiveStep(0); }}
-                    className="flex-1 bg-black text-white text-xs font-bold uppercase py-3 rounded-full hover:bg-neutral-900 transition-colors active:scale-[0.98]"
+                    className="flex-1 bg-black text-white text-xs font-black uppercase py-3 border-2 border-black rounded-sm hover:bg-neutral-900 transition-all shadow-[2px_2px_0px_0px_#000000] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none"
                   >
                     Cerrar guía
                   </button>
                 ) : (
                   <button
                     onClick={() => setActiveStep(s => s + 1)}
-                    className="flex-1 bg-black text-white text-xs font-bold uppercase py-3 rounded-full hover:bg-neutral-900 transition-colors active:scale-[0.98]"
+                    className="flex-1 bg-black text-white text-xs font-black uppercase py-3 border-2 border-black rounded-sm hover:bg-neutral-900 transition-all shadow-[2px_2px_0px_0px_#000000] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none"
                   >
                     {activeStep === totalSteps - 1 ? 'Finalizar ✓' : 'Siguiente →'}
                   </button>
